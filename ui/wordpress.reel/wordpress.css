@@ -53,7 +53,8 @@
 
 #blog-post .postButton {
     position: fixed;
-    top: 1em;
+    top: 3em;
+    left: 1em;
     font-size: 32px;
     font-family: "FontAwesome";
     display: inline-block;
