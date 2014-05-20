@@ -28,7 +28,7 @@ exports.Wordpress = Component.specialize(/** @lends Wordpress# */ {
             var blog = document.querySelector("#blog-post")
             blog.style.opacity = 0;
 
-            document.querySelector(".container.selected").classList.remove("selected");
+            document.querySelector(".js-card.selected").classList.remove("selected");
 
             var self = this;
             window.setTimeout(function() {
