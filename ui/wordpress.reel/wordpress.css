@@ -1,3 +1,8 @@
+.Wordpress {
+    position: relative;
+    flex: 1;
+}
+
 
 @-webkit-keyframes displaycard {
   0% {
@@ -20,48 +25,53 @@
 }
 
 #blog-post {
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: rgba(209,209,209,1);
-  position: absolute;
-  opacity: 0;
-
-  -webkit-transition: opacity 1s;
+    top: 0; left: 0; bottom: 0; right: 0;
+    position: absolute;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
 }
 
 #blog-post .content {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    padding: 25px;
+    padding: 1rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    color: hsl(0,0%, 20%);
 }
 
 #blog-post .postHeading {
-  font-family: "Bitter";
+    font-family: "Bitter";
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
 #blog-post .postContent {
-  line-height: 1.5em;
-  text-align: justify;
+    line-height: 1.5em;
+    font-size: .9em;
 }
 
 #blog-post .postButton {
-  font-size: 32px;
-  font-family: "FontAwesome";
-  display: inline-block;
-  background: none;
-  border: none;
-  color: black;
-
-  margin: 0;
-  padding: 0;
+    position: fixed;
+    top: 3em;
+    left: 1em;
+    font-size: 32px;
+    font-family: "FontAwesome";
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-width: 0;
+    text-shadow: 0 0 1px black;
 }
 
 #blog-post .postImage {
+    display: block;
     width: 100%;
-    height: 100%;
-    opacity: 0.2;
 }
 
 .container {
@@ -97,7 +107,7 @@
 
 .container .card .back {
   -webkit-transform: rotateY(180deg);
-  background: rgba(209,209,209,1);
+  background: hsl(0,0%, 95%);
 }
 
 .image {
@@ -124,4 +134,13 @@
 
 .container.selected .card {
   -webkit-animation: displaycard 1.5s both normal;
+}
+
+
+@media (min-width: 800px) {
+    
+    #blog-post {
+        font-size: 1.4em;
+    }
+    
 }
