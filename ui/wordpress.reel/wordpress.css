@@ -29,6 +29,11 @@
     color: hsl(0,0%, 20%);
 }
 
+.Post-image {
+    display: block;
+    width: 100%;
+}
+
 .Post-heading {
     font-family: "Bitter";
     font-size: 1.2em;
@@ -60,49 +65,70 @@
     box-shadow: none;
 }
 
-.Post-image {
-    display: block;
-    width: 100%;
+.Post-button.montage-active {
+    opacity: .5;
 }
+
+
 
 
 
 /* Card ---------------------------------------- */
 
 .Card {
-  position: relative;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
 
-  width: 500px;
-  height: 500px;
+.Card.selected .Card-wrapper {
+    -webkit-animation: displaycard 1.5s both normal;
+}
 
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
+@-webkit-keyframes displaycard {
+    0% {
+        -webkit-transform: none;
+    }
+
+    30% {
+        -webkit-transform: translateX(500px);
+        -webkit-animation-timing-function: ease-out;
+    }
+
+    60% {
+        -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px);
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px) scale3d(5,5,5);
+    }
 }
 
 .Card-wrapper {
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
 }
 
 .Card-face {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-  position: absolute;
-  -webkit-backface-visibility: hidden;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
 }
 
 .Card-face--front {
-  -webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
 .Card-face--back {
-  -webkit-transform: rotateY(180deg);
-  background: hsl(0,0%, 95%);
+    -webkit-transform: rotateY(180deg);
+    background: hsl(0,0%, 95%);
 }
 
 .Card-image {
@@ -127,26 +153,4 @@
     color: white;
 }
 
-.Card.selected .Card-wrapper {
-  -webkit-animation: displaycard 1.5s both normal;
-}
 
-@-webkit-keyframes displaycard {
-    0% {
-        -webkit-transform: none;
-    }
-
-    30% {
-        -webkit-transform: translateX(500px);
-        -webkit-animation-timing-function: ease-out;
-    }
-
-    60% {
-        -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px);
-        -webkit-animation-timing-function: ease-in;
-    }
-
-    100% {
-        -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px) scale3d(5,5,5);
-    }
-}
