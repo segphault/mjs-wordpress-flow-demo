@@ -4,15 +4,15 @@
  */
 
 html {
-    font-family: sans-serif;
-    color: #333;
-    
     /* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
     -webkit-text-size-adjust: 100%;
+    
+    font-family: Open Sans, sans-serif;
+    color: #aaa;
+    background-color: #151515;
 }
 
 body {
     margin: 0; /* Remove default margin */
-    background-color: #151515;
 }
 
