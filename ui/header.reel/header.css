@@ -1,10 +1,18 @@
 .Header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem;
     background: coral;
+}
+
+.Header > * {
+    margin: 0.4rem;
 }
 
 .Header .digit-Title {
     font-weight: 300;
     color: #fff;
-    line-height: 2em;
 }
+
+

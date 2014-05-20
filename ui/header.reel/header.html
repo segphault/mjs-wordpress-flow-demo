@@ -10,6 +10,12 @@
                 "element": {"#": "owner"}
             }
         },
+        "logo": {
+            "prototype": "ui/logo.reel",
+            "properties": {
+                "element": {"#": "logo"}
+            }
+        },
         "title": {
             "prototype": "digit/ui/title.reel",
             "properties": {
@@ -21,8 +27,9 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="Header">
+    <header data-montage-id="owner" class="Header">
+        <div data-montage-id="logo"></div>
         <h1 data-montage-id="title"></h1>
-    </div>
+    </header>
 </body>
 </html>
