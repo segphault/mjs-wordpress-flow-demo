@@ -57,6 +57,7 @@
     text-shadow: 0 0 1px hsl(0, 0%, 0%);
     height: auto;
     min-width: 0;
+    -webkit-transform: translateZ(0); /* Put onto own layer to avoid jumping */
 }
 
 .Post-button.digit-Button:focus {
