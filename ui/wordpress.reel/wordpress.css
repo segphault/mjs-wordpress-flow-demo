@@ -1,3 +1,8 @@
+.Wordpress {
+    position: relative;
+    flex: 1;
+}
+
 
 @-webkit-keyframes displaycard {
   0% {
