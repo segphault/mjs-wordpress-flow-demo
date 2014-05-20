@@ -42,19 +42,22 @@
 
 .Post-button {
     position: fixed;
-    top: 3em;
-    left: 1em;
+    top: 2em;
+    left: 0;
     font-size: 32px;
     font-family: "FontAwesome";
-    display: inline-block;
-    background: none;
     border: none;
-    color: #fff;
+    color: hsl(0, 100%, 100%);
     margin: 0;
-    padding: 0;
+    padding: 1em;
+    border-radius: 0;
+    text-shadow: 0 0 1px hsl(0, 0%, 0%);
     height: auto;
     min-width: 0;
-    text-shadow: 0 0 1px black;
+}
+
+.Post-button:focus {
+    box-shadow: none;
 }
 
 .Post-image {
