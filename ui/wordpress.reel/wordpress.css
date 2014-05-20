@@ -1,5 +1,6 @@
 .Wordpress {
     position: relative;
+    -webkit-flex: 1;
     flex: 1;
 }
 
@@ -152,5 +153,3 @@
     font-size: 1.5em;
     color: white;
 }
-
-
