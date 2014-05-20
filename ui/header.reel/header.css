@@ -1,6 +1,9 @@
 .Header {
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     padding: 0.4rem;
     background: coral;
@@ -11,6 +14,7 @@
 }
 
 .Header .digit-Title {
+    -webkit-flex: 1;
     flex: 1;
     font-size: 1.2em;
     font-weight: 300;
