@@ -1,0 +1,19 @@
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem;
+    background: coral;
+}
+
+.Header > * {
+    margin: 0.4rem;
+}
+
+.Header .digit-Title {
+    flex: 1;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
