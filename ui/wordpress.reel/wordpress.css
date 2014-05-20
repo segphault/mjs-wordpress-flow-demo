@@ -64,9 +64,9 @@
 
 
 
-/* Flow ---------------------------------------- */
+/* Card ---------------------------------------- */
 
-.container {
+.Card {
   position: relative;
 
   width: 500px;
@@ -76,7 +76,7 @@
   -webkit-user-select: none;
 }
 
-.container .card {
+.Card-wrapper {
   position: absolute;
   -webkit-transform-style: preserve-3d;
 
@@ -84,7 +84,7 @@
   height: 100%;
 }
 
-.container .card .face {
+.Card-wrapper .face {
   width: 100%;
   height: 100%;
 
@@ -93,11 +93,11 @@
   -webkit-backface-visibility: hidden;
 }
 
-.container .card .front {
+.Card-wrapper .front {
   -webkit-transform-style: preserve-3d;
 }
 
-.container .card .back {
+.Card-wrapper .back {
   -webkit-transform: rotateY(180deg);
   background: hsl(0,0%, 95%);
 }
@@ -124,7 +124,7 @@
     color: white;
 }
 
-.container.selected .card {
+.Card.selected .Card-wrapper {
   -webkit-animation: displaycard 1.5s both normal;
 }
 
