@@ -42,9 +42,10 @@ body {
 .Loader-logo {
     display: block;
     margin: auto;
-    width: 128px;
-    height: 128px;
-    background: url(../images/logo.svg);
+    width: 64px;
+    height: 64px;
+    background: url(../images/logo.svg) no-repeat center center;
+    background-size: 100% auto;
     -webkit-animation: Loader--animate 3.6s linear infinite;
             animation: Loader--animate 3.6s linear infinite;
 }
