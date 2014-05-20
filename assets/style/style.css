@@ -21,10 +21,33 @@ body {
 }
 
 
-/* 
- * Global overrides 
- */
+/* Global overrides  -------------------------------------------- */
 
 .digit-Button .fa {
     margin-left: .5em;
 }
+
+
+/* Loader -------------------------------------------- */
+
+.Loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+}
+.Loader-logo {
+    display: block;
+    margin: auto;
+    width: 128px;
+    height: 128px;
+    background: url(assets/images/logo.svg);
+    -webkit-animation: Loader--animate 3.6s linear infinite;
+            animation: Loader--animate 3.6s linear infinite;
+}
+
+@-webkit-keyframes Loader--animate { 100% { -webkit-transform: rotate(360deg); } }
+        @keyframes Loader--animate { 100% {         transform: rotate(360deg); } }
