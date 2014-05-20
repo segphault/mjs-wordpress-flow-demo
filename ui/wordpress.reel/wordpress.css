@@ -16,11 +16,8 @@
     -webkit-transition: opacity 1s;
 }
 
-@media (min-width: 800px) {
-    .Post {
-        font-size: 1.4em;
-    }
-}
+@media (min-width: 500px) { .Post { font-size: 1.2em; } }
+@media (min-width: 800px) { .Post { font-size: 1.4em; } }
 
 .Post-content {
     padding: 1rem;
