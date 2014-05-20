@@ -44,6 +44,7 @@
 #blog-post .postHeading {
     font-family: "Bitter";
     font-size: 1.2em;
+    font-weight: 400;
 }
 
 #blog-post .postContent {
@@ -133,4 +134,13 @@
 
 .container.selected .card {
   -webkit-animation: displaycard 1.5s both normal;
+}
+
+
+@media (min-width: 800px) {
+    
+    #blog-post {
+        font-size: 1.4em;
+    }
+    
 }
