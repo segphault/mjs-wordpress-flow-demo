@@ -10,6 +10,14 @@
                 "element": {"#": "owner"}
             }
         },
+        "button": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "enabled": true,
+                "label": "Button"
+            }
+        },
         "logo": {
             "prototype": "ui/logo.reel",
             "properties": {
@@ -30,7 +38,9 @@
     <header data-montage-id="owner" class="Header">
         <div data-montage-id="logo"></div>
         <h1 data-montage-id="title"></h1>
-        <i class="fa fa-share"></i>
+        <button data-montage-id="button">
+            <i class="fa fa-share"></i>
+        </button>
     </header>
 </body>
 </html>
