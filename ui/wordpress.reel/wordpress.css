@@ -38,28 +38,33 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    color: hsl(0,0%, 20%);
 }
 
 #blog-post .postHeading {
-  font-family: "Bitter";
+    font-family: "Bitter";
+    font-size: 1.2em;
 }
 
 #blog-post .postContent {
-  line-height: 1.5em;
-  text-align: justify;
+    line-height: 1.5em;
+    font-size: .9em;
 }
 
 #blog-post .postButton {
-  font-size: 32px;
-  font-family: "FontAwesome";
-  display: inline-block;
-  background: none;
-  border: none;
-  color: inherit;
-  margin: 0;
-  padding: 0;
-  height: auto;
-  min-width: 0;
+    position: fixed;
+    top: 1em;
+    font-size: 32px;
+    font-family: "FontAwesome";
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-width: 0;
+    text-shadow: 0 0 1px black;
 }
 
 #blog-post .postImage {
@@ -100,7 +105,7 @@
 
 .container .card .back {
   -webkit-transform: rotateY(180deg);
-  background: rgba(209,209,209,1);
+  background: hsl(0,0%, 95%);
 }
 
 .image {
