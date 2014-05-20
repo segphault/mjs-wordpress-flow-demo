@@ -19,3 +19,12 @@ body {
     margin: 0; /* Remove default margin */
     font-size: 16px; /* Sizing of components */
 }
+
+
+/* 
+* Global overrides 
+*/
+
+.digit-Button .fa {
+    margin-left: .5em;
+}
