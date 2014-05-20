@@ -11,8 +11,9 @@
 }
 
 .Header .digit-Title {
+    flex: 1;
+    font-size: 1.2em;
     font-weight: 300;
     color: #fff;
+    text-align: center;
 }
-
-
