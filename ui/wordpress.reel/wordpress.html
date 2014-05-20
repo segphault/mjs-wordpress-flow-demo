@@ -158,7 +158,7 @@
             }
         },
         "postButton": {
-            "prototype": "matte/ui/button.reel",
+            "prototype": "digit/ui/button.reel",
             "properties": {
                 "element": {"#": "postButton"},
                 "label": "\uf053"
@@ -182,24 +182,24 @@
 </head>
 <body>
     <div data-montage-id="owner" class="Wordpress">
-        <div id="blog-post">
-            <img class="postImage" data-montage-id="postImage" src="">
-            <div class="content">
-                <div class="postButton" data-montage-id="postButton"></div>
-                <h1 class="postHeading" data-montage-id="postHeading"></h1>
-                <div class="postContent" data-montage-id="postContent"></div>
+        <div id="blog-post" class="Post">
+            <img data-montage-id="postImage" class="Post-image" src="">
+            <div class="Post-content">
+                <div class="Post-button" data-montage-id="postButton"></div>
+                <h1 class="Post-heading" data-montage-id="postHeading"></h1>
+                <div class="Post-copy" data-montage-id="postContent"></div>
             </div>
         </div>
-        <div class="flow" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="flow">
-            <div class="container">
-                <div class="card">
-                    <div class="front face">
-                        <div class="caption">
-                            <p class="title" data-montage-id="text1"></p>
+        <div data-montage-id="flow" class="Flow" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0">
+            <div class="Card js-card">
+                <div class="Card-wrapper">
+                    <div class="Card-face Card-face--front">
+                        <div class="Card-caption">
+                            <p data-montage-id="text1" class="Card-title"></p>
                         </div>
-                        <img class="image" data-montage-id="image">
+                        <img data-montage-id="image" class="Card-image">
                     </div>
-                    <div class="back face">
+                    <div class="Card-face Card-face--back">
                         <p></p>
                     </div>
                 </div>

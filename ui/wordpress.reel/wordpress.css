@@ -4,27 +4,9 @@
 }
 
 
-@-webkit-keyframes displaycard {
-  0% {
-    -webkit-transform: none;
-  }
-  
-  30% {
-    -webkit-transform: translateX(500px);
-    -webkit-animation-timing-function: ease-out;
-  }
-  
-  60% {
-    -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px);
-    -webkit-animation-timing-function: ease-in;
-  }
-  
-  100% {
-    -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px) scale3d(5,5,5);
-  }
-}
+/* Post ---------------------------------------- */
 
-#blog-post {
+.Post {
     top: 0; left: 0; bottom: 0; right: 0;
     position: absolute;
     overflow-x: auto;
@@ -33,7 +15,13 @@
     -webkit-transition: opacity 1s;
 }
 
-#blog-post .content {
+@media (min-width: 800px) {
+    .Post {
+        font-size: 1.4em;
+    }
+}
+
+.Post-content {
     padding: 1rem;
     max-width: 700px;
     margin-left: auto;
@@ -41,106 +29,128 @@
     color: hsl(0,0%, 20%);
 }
 
-#blog-post .postHeading {
+.Post-image {
+    display: block;
+    width: 100%;
+}
+
+.Post-heading {
     font-family: "Bitter";
     font-size: 1.2em;
     font-weight: 400;
 }
 
-#blog-post .postContent {
+.Post-copy {
     line-height: 1.5em;
     font-size: .9em;
 }
 
-#blog-post .postButton {
+.Post-button.digit-Button {
     position: fixed;
-    top: 3em;
-    left: 1em;
+    top: 2em;
+    left: 0;
     font-size: 32px;
     font-family: "FontAwesome";
-    display: inline-block;
-    background: none;
     border: none;
-    color: #fff;
+    color: hsl(0, 100%, 100%);
     margin: 0;
-    padding: 0;
+    padding: 1em;
+    border-radius: 0;
+    text-shadow: 0 0 1px hsl(0, 0%, 0%);
     height: auto;
     min-width: 0;
-    text-shadow: 0 0 1px black;
 }
 
-#blog-post .postImage {
-    display: block;
-    width: 100%;
+.Post-button.digit-Button:focus {
+    box-shadow: none;
 }
 
-.container {
-  position: relative;
-
-  width: 500px;
-  height: 500px;
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
+.Post-button.digit-Button.montage--active {
+    color: hsla(0,0%,100%,.5);
+    background: transparent;
 }
 
-.container .card {
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
 
-  width: 100%;
-  height: 100%;
+
+
+
+/* Card ---------------------------------------- */
+
+.Card {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
 }
 
-.container .card .face {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-  position: absolute;
-  -webkit-backface-visibility: hidden;
+.Card.selected .Card-wrapper {
+    -webkit-animation: displaycard 1.5s both normal;
 }
 
-.container .card .front {
-  -webkit-transform-style: preserve-3d;
+@-webkit-keyframes displaycard {
+    0% {
+        -webkit-transform: none;
+    }
+
+    30% {
+        -webkit-transform: translateX(500px);
+        -webkit-animation-timing-function: ease-out;
+    }
+
+    60% {
+        -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px);
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px) scale3d(5,5,5);
+    }
 }
 
-.container .card .back {
-  -webkit-transform: rotateY(180deg);
-  background: hsl(0,0%, 95%);
-}
-
-.image {
+.Card-wrapper {
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
     width: 100%;
     height: 100%;
 }
 
-.caption {
-    position: fixed;
-    background-color: rgba(25,25,25,0.8);
-    width: 500px;
+.Card-face {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
 }
 
-.caption p {
+.Card-face--front {
+    -webkit-transform-style: preserve-3d;
+}
+
+.Card-face--back {
+    -webkit-transform: rotateY(180deg);
+    background: hsl(0,0%, 95%);
+}
+
+.Card-image {
+    width: 100%;
+    height: 100%;
+}
+
+.Card-caption {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(25,25,25,0.8);
+}
+
+.Card-title {
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     line-height: 1.5em;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 1.5em;
     letter-spacing: 1.2px;
-    font-size: 22px;
+    font-size: 1.5em;
     color: white;
 }
 
-.container.selected .card {
-  -webkit-animation: displaycard 1.5s both normal;
-}
 
-
-@media (min-width: 800px) {
-    
-    #blog-post {
-        font-size: 1.4em;
-    }
-    
-}
