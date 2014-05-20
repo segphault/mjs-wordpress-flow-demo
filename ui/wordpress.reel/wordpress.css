@@ -4,27 +4,9 @@
 }
 
 
-@-webkit-keyframes displaycard {
-  0% {
-    -webkit-transform: none;
-  }
-  
-  30% {
-    -webkit-transform: translateX(500px);
-    -webkit-animation-timing-function: ease-out;
-  }
-  
-  60% {
-    -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px);
-    -webkit-animation-timing-function: ease-in;
-  }
-  
-  100% {
-    -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px) scale3d(5,5,5);
-  }
-}
+/* Post ---------------------------------------- */
 
-#blog-post {
+.Post {
     top: 0; left: 0; bottom: 0; right: 0;
     position: absolute;
     overflow-x: auto;
@@ -33,7 +15,13 @@
     -webkit-transition: opacity 1s;
 }
 
-#blog-post .content {
+@media (min-width: 800px) {
+    .Post {
+        font-size: 1.4em;
+    }
+}
+
+.Post-content {
     padding: 1rem;
     max-width: 700px;
     margin-left: auto;
@@ -41,18 +29,18 @@
     color: hsl(0,0%, 20%);
 }
 
-#blog-post .postHeading {
+.Post-heading {
     font-family: "Bitter";
     font-size: 1.2em;
     font-weight: 400;
 }
 
-#blog-post .postContent {
+.Post-copy {
     line-height: 1.5em;
     font-size: .9em;
 }
 
-#blog-post .postButton {
+.Post-button {
     position: fixed;
     top: 3em;
     left: 1em;
@@ -69,10 +57,14 @@
     text-shadow: 0 0 1px black;
 }
 
-#blog-post .postImage {
+.Post-image {
     display: block;
     width: 100%;
 }
+
+
+
+/* Flow ---------------------------------------- */
 
 .container {
   position: relative;
@@ -136,11 +128,22 @@
   -webkit-animation: displaycard 1.5s both normal;
 }
 
-
-@media (min-width: 800px) {
-    
-    #blog-post {
-        font-size: 1.4em;
+@-webkit-keyframes displaycard {
+    0% {
+        -webkit-transform: none;
     }
-    
+
+    30% {
+        -webkit-transform: translateX(500px);
+        -webkit-animation-timing-function: ease-out;
+    }
+
+    60% {
+        -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px);
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(500px) translateY(100px) rotateY(190deg) rotateX(-4deg) translateZ(-500px) scale3d(5,5,5);
+    }
 }
