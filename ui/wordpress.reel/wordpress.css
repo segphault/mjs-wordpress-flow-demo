@@ -57,7 +57,7 @@
   display: inline-block;
   background: none;
   border: none;
-  color: black;
+  color: inherit;
 
   margin: 0;
   padding: 0;
