@@ -1,3 +1,10 @@
 .Header {
+    text-align: center;
+    background: coral;
+}
 
+.Header .digit-Title {
+    font-weight: 300;
+    color: #fff;
+    line-height: 2em;
 }
