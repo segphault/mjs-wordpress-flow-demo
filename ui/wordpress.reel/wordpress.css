@@ -67,6 +67,7 @@
 
 .Post-button.montage-active {
     opacity: .5;
+    background: transparent;
 }
 
 
@@ -137,19 +138,18 @@
 }
 
 .Card-caption {
-    position: fixed;
+    position: absolute;
+    width: 100%;
     background-color: rgba(25,25,25,0.8);
-    width: 500px;
 }
 
 .Card-title {
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     line-height: 1.5em;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 1.5em;
     letter-spacing: 1.2px;
-    font-size: 22px;
+    font-size: 1.5em;
     color: white;
 }
 
