@@ -44,7 +44,7 @@ body {
     margin: auto;
     width: 128px;
     height: 128px;
-    background: url(assets/images/logo.svg);
+    background: url(../images/logo.svg);
     -webkit-animation: Loader--animate 3.6s linear infinite;
             animation: Loader--animate 3.6s linear infinite;
 }
