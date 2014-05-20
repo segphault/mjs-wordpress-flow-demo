@@ -19,13 +19,13 @@
                 "element": {"#": "flow"},
                 "cameraFov": 50,
                 "cameraPosition": [
-                    336.05000000000155,
-                    -190.2499999999991,
+                    -3.949999999998454,
+                    -0.2499999999990905,
                     1655.5749999999966
                 ],
                 "cameraTargetPoint": [
-                    49.30000000000018,
-                    0,
+                    -0.6999999999998181,
+                    -10,
                     357.4249999999979
                 ],
                 "content": [],
@@ -56,35 +56,35 @@
                                 "nextDensity": 10,
                                 "previousDensity": 10,
                                 "knotPosition": [
-                                    -951.8749999999984,
-                                    -440,
-                                    611.324999999998
+                                    -671.8749999999984,
+                                    -270,
+                                    1041.324999999998
                                 ],
                                 "rotateX": 0,
                                 "rotateY": 0,
                                 "rotateZ": 0,
                                 "opacity": 1,
                                 "nextHandlerPosition": [
-                                    588.1250000000016,
-                                    -440,
-                                    -278.675000000002
+                                    828.1250000000016,
+                                    -270,
+                                    21.324999999998
                                 ]
                             },
                             {
                                 "knotPosition": [
-                                    1057.099999999999,
-                                    -440,
-                                    -1156.0499999999993
+                                    1567.099999999999,
+                                    -270,
+                                    -1036.0499999999993
                                 ],
                                 "nextHandlerPosition": [
-                                    2077.825,
-                                    -440,
-                                    -1451.849999999998
+                                    2587.8250000000007,
+                                    -270,
+                                    -1331.849999999998
                                 ],
                                 "previousHandlerPosition": [
-                                    36.37499999999727,
-                                    -440,
-                                    -860.2500000000005
+                                    546.3749999999973,
+                                    -270,
+                                    -740.2500000000005
                                 ],
                                 "nextDensity": 10,
                                 "previousDensity": 10,
@@ -121,6 +121,49 @@
                 "src": {"<-": "@flow:iteration.object.featured_image.source"}
             }
         },
+        "postButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "postButton"},
+                "label": ""
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "postContent": {
+            "prototype": "ui/html",
+            "properties": {
+                "element": {"#": "postContent"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@rangeController.selection.0.content"}
+            }
+        },
+        "postHeading": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "postHeading"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@rangeController.selection.0.title"}
+            }
+        },
+        "postImage": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "postImage"},
+                "crossOrigin": null
+            },
+            "bindings": {
+                "src": {"<-": "@rangeController.selection.0.featured_image.source"}
+            }
+        },
         "rangeController": {
             "prototype": "montage/core/range-controller",
             "bindings": {
@@ -135,46 +178,6 @@
             },
             "bindings": {
                 "value": {"<-": "@flow:iteration.object.title"}
-            }
-        },
-        "postHeading": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "postHeading"},
-                "value": "Text"
-            },
-            "bindings": {
-                "value": {"<-": "@rangeController.selection.0.title"}
-            }
-        },
-        "postContent": {
-            "prototype": "ui/html",
-            "properties": {
-                "element": {"#": "postContent"},
-                "value": "Text"
-            },
-            "bindings": {
-                "value": {"<-": "@rangeController.selection.0.content"}
-            }
-        },
-        "postButton": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "postButton"},
-                "label": "\uf053"
-            },
-            "listeners": [
-                {"type": "action", "listener": {"@": "owner"}}
-            ]
-        },
-        "postImage": {
-            "prototype": "digit/ui/image.reel",
-            "properties": {
-                "element": {"#": "postImage"},
-                "crossOrigin": null
-            },
-            "bindings": {
-                "src": {"<-": "@rangeController.selection.0.featured_image.source"}
             }
         }
     }
