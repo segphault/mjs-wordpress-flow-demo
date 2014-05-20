@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="card.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "image": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "image"},
+                "crossOrigin": null
+            },
+            "bindings": {
+                "src": {"<-": "@owner.article.featured_image.source"}
+            }
+        },
+        "text1": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text1"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.article.title"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Card">
+        <div class="front face">
+            <div class="caption">
+                <p class="title" data-montage-id="text1"></p>
+            </div>
+            <img class="image" data-montage-id="image">
+        </div>
+        <div class="back face">
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
