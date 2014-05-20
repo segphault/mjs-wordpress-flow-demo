@@ -65,8 +65,8 @@
     box-shadow: none;
 }
 
-.Post-button.montage-active {
-    opacity: .5;
+.Post-button.montage--active {
+    color: hsla(0,0%,100%,.5);
     background: transparent;
 }
 
