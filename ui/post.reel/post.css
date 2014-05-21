@@ -5,6 +5,7 @@
     -webkit-overflow-scrolling: touch;
     opacity: 0;
     -webkit-transition: opacity 1s;
+    background-color: hsl(0,0%,100%);
 }
 
 @media (min-width: 500px) { .Post { font-size: 1.2em; } }
