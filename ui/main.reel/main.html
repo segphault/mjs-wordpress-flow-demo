@@ -16,6 +16,16 @@
                 "selectedPost": {"<-": "@articlesController.selection.0"}
             }
         },
+        "actionEventListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "hidePost",
+                "handler": {"@": "owner"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
         "articlesController": {
             "prototype": "montage/core/range-controller",
             "bindings": {
@@ -138,7 +148,7 @@
                 {
                     "type": "closePost",
                     "useCapture": false,
-                    "listener": {"@": "owner"}
+                    "listener": {"@": "actionEventListener"}
                 }
             ]
         },
