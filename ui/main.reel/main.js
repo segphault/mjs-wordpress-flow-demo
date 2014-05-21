@@ -26,7 +26,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     revealPost: {
         value: function () {
             
-            if (this.templateObjects.articlesController.selection.length > 0) {
+            if (0 === this.templateObjects.articlesController.selection.length) {
                 return;
             }
             
@@ -41,7 +41,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     hidePost: {
         value: function() {
             
-            if (0 === this.templateObjects.articlesController.selection.length) {
+            if (this.templateObjects.articlesController.selection.length > 0) {
                 return;
             }
             
