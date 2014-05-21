@@ -11,7 +11,8 @@ html {
     font-size: 16px; /* Spacing of components */
     color: #fff;
     fill: currentColor;
-    background-color: hsl(0,0%, 15%);
+    background: hsl(0,0%, 15%) url(../images/bg.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 body {
