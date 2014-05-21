@@ -18,21 +18,18 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     templateDidLoad: {
         value: function(firstTime) {
             if (firstTime) {
-                this.addPathChangeListener("selectedPost", this, "handleSelection");
-            }
-        }
-    },
-
-    handleSelection: {
-        value: function(post) {
-            if (post) {
-                this.revealPost();
+                this.addPathChangeListener("selectedPost", this, "revealPost");
             }
         }
     },
     
     revealPost: {
         value: function () {
+            
+            if (this.templateObjects.articlesController.selection.length > 0) {
+                return;
+            }
+            
             window.setTimeout(function() {
                 var blog = document.getElementById("blog-post")
                 blog.style.opacity = 1;
@@ -43,6 +40,11 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     
     hidePost: {
         value: function() {
+            
+            if (0 === this.templateObjects.articlesController.selection.length) {
+                return;
+            }
+            
             var blog = document.querySelector("#blog-post")
             blog.style.opacity = 0;
 

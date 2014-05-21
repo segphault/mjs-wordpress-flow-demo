@@ -133,7 +133,14 @@
             "properties": {
                 "element": {"#": "header"},
                 "articlesController": {"@": "articlesController"}
-            }
+            },
+            "listeners": [
+                {
+                    "type": "closePost",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "post": {
             "prototype": "ui/post.reel",
