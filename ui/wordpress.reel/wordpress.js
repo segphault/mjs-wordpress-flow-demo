@@ -25,21 +25,6 @@ exports.Wordpress = Component.specialize(/** @lends Wordpress# */ {
         }
     },
 
-    handlePostButtonAction: {
-        value: function() {
-            var blog = document.querySelector("#blog-post")
-            blog.style.opacity = 0;
-
-            document.querySelector(".js-card.selected").classList.remove("selected");
-
-            var self = this;
-            window.setTimeout(function() {
-                blog.style.zIndex = 0;
-                self.templateObjects.rangeController.clearSelection();
-            }, 1000);
-        }
-    },
-
     handleSelection: {
         value: function(post) {
             if (!post) return;
