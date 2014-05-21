@@ -17,7 +17,7 @@ exports.Header = Component.specialize(/** @lends Header# */ {
     
     handleCloseButtonAction: {
         value: function() {
-            this.dispatchEventNamed("closePost", true, true);
+            this.dispatchEventNamed("hidePost", true, true);
         }
     }
 });
