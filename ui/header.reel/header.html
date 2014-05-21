@@ -10,12 +10,20 @@
                 "element": {"#": "owner"}
             }
         },
-        "button": {
+        "closeButton": {
             "prototype": "digit/ui/button.reel",
             "properties": {
-                "element": {"#": "button"},
-                "enabled": true,
-                "label": "Tweet"
+                "element": {"#": "closeButton"},
+                "label": "×"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ],
+            "bindings": {
+                "classList.has('is-hidden')": {"<-": "!@owner.articlesController.selection.0"}
             }
         },
         "logo": {
@@ -38,9 +46,7 @@
     <header data-montage-id="owner" class="Header">
         <div data-montage-id="logo"></div>
         <h1 data-montage-id="title"></h1>
-        <a data-montage-id="button" href="https://twitter.com/intent/tweet?text=Just saw a demo made with: &url=http://montagestudio.com" target="_blank">
-            <i class="fa fa-twitter"></i>
-        </a>
+        <button data-montage-id="closeButton" class="Header-closeButton"></button>
     </header>
 </body>
 </html>

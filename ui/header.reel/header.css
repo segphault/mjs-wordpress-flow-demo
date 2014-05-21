@@ -27,7 +27,20 @@
     text-align: center;
 }
 
-.Header .digit-Button {
-    font-family: inherit;
+.Header-closeButton {
     line-height: 1;
+    font-size: 24px;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    min-width: 0;
+    border: none;
+}
+
+.Header-closeButton:focus {
+    box-shadow: none;
+}
+
+.Header-closeButton.is-hidden {
+    visibility: hidden;
 }
