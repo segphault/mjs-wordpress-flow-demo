@@ -27,6 +27,12 @@
     color: hsl(0,0%, 20%);
 }
 
+.Post-imageWrapper {
+    max-height: 80%; /* Fallback */
+    max-height: calc(100% - 5.5em);
+    overflow: hidden;
+}
+
 .Post-image {
     display: block;
     width: 100%;
