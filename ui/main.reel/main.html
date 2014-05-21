@@ -16,16 +16,15 @@
         "header": {
             "prototype": "ui/header.reel",
             "properties": {
-                "element": {"#": "header"}
+                "element": {"#": "header"},
+                "articlesController": {"@": "articlesController"}
             }
         },
         "wordpressFeatured": {
             "prototype": "ui/wordpress.reel",
             "properties": {
-                "element": {"#": "wordpressFeatured"}
-            },
-            "bindings": {
-                "articles": {"<-": "@wordpressConnector.articles"}
+                "element": {"#": "wordpressFeatured"},
+                "articlesController": {"@": "articlesController"}
             }
         },
         "wordpressConnector": {
@@ -33,6 +32,12 @@
             "properties": {
                 "host": "demo.phault.net",
                 "path": "posts"
+            }
+        },
+        "articlesController": {
+            "prototype": "montage/core/range-controller",
+            "bindings": {
+                "content": {"<-": "@wordpressConnector.articles"}
             }
         }
     }

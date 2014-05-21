@@ -21,7 +21,10 @@
                     "type": "action",
                     "listener": {"@": "owner"}
                 }
-            ]
+            ],
+            "bindings": {
+                "classList.has('is-hidden')": {"<-": "!@owner.articlesController.selection.0"}
+            }
         },
         "logo": {
             "prototype": "ui/logo.reel",

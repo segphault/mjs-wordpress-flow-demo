@@ -10,7 +10,7 @@
                 "element": {"#": "owner"}
             },
             "bindings": {
-                "selectedPost": {"<-": "@rangeController.selection.0"}
+                "selectedPost": {"<-": "articlesController.selection.0"}
             }
         },
         "card1": {
@@ -37,8 +37,6 @@
                     -10,
                     357.4249999999979
                 ],
-                "content": [],
-                "contentController": {"@": "rangeController"},
                 "flowEditorMetadata": {
                     "flowEditorVersion": 0.1,
                     "shapes": [
@@ -118,12 +116,9 @@
                 "scrollVectorX": true,
                 "scrollVectorY": true,
                 "selectedIndexScrollingOffset": 0
-            }
-        },        
-        "rangeController": {
-            "prototype": "montage/core/range-controller",
+            },
             "bindings": {
-                "content": {"<-": "@owner.articles"}
+                "contentController": {"<-": "@owner.articlesController"}
             }
         },
         "post": {
@@ -132,7 +127,7 @@
                 "element": {"#": "post"}
             },
             "bindings": {
-                "article": {"<-": "@rangeController.selection.0"}
+                "article": {"<-": "@owner.articlesController.selection.0"}
             }
         }
     }

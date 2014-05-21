@@ -14,6 +14,11 @@ exports.Header = Component.specialize(/** @lends Header# */ {
             this.super();
         }
     },
+
+    articlesController: {
+        value: null
+    },
+
     handleCloseButtonAction: {
         value: function() {
             var blog = document.querySelector("#blog-post")
@@ -24,7 +29,7 @@ exports.Header = Component.specialize(/** @lends Header# */ {
             var self = this;
             window.setTimeout(function() {
                 blog.style.zIndex = 0;
-                self.templateObjects.rangeController.clearSelection();
+                self.articlesController.clearSelection();
             }, 1000);
         }
     }

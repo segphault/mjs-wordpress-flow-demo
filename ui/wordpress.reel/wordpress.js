@@ -25,6 +25,10 @@ exports.Wordpress = Component.specialize(/** @lends Wordpress# */ {
         }
     },
 
+    articlesController: {
+        value: null
+    },
+
     handleSelection: {
         value: function(post) {
             if (!post) return;
