@@ -10,6 +10,13 @@
       }
     }
   },
+  "blueprint_unnamed_hidePost": {
+    "prototype": "montage/core/meta/event-blueprint",
+    "properties": {
+      "name": "hidePost",
+      "blueprint": {"@": "root"}
+    }
+  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
@@ -21,6 +28,9 @@
       "propertyBlueprintGroups": {
         "Header": []
       },
+      "eventBlueprints": [
+        {"@": "blueprint_unnamed_hidePost"}
+      ],
       "module": {
         "%": "ui/header.reel"
       },
