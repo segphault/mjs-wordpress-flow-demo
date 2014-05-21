@@ -25,16 +25,6 @@ exports.Wordpress = Component.specialize(/** @lends Wordpress# */ {
         }
     },
 
-    loadContent: {
-        value: function()  {
-            var params = {"filter[category_name]": "featured"};
-            var request = this.makeRequest(this.siteAddress, "posts", params);
-
-            var self = this;
-            request.then(function(output) { self.items = output; });
-        }
-    },
-
     handlePostButtonAction: {
         value: function() {
             var blog = document.querySelector("#blog-post")
