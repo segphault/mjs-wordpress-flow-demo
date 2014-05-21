@@ -13,13 +13,5 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function Main() {
             this.super();
         }
-    },
-    
-    enterDocument: {
-        value: function (firstTime) {
-            if (firstTime) {
-                this.templateObjects.wordpressConnector.makeRequest().done();
-            }
-        }
     }
 });
