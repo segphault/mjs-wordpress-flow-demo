@@ -73,9 +73,9 @@
 
 
 
-/* Card ---------------------------------------- */
+/* Flow ---------------------------------------- */
 
-.Card {
+.Flow-item {
     position: relative;
     width: 500px;
     height: 500px;
@@ -83,7 +83,14 @@
     -webkit-user-select: none;
 }
 
-.Card.selected .Card-wrapper {
+.Flow-item-wrapper {
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.Flow-item.selected .Flow-item-wrapper {
     -webkit-animation: displaycard 1.5s both normal;
 }
 
@@ -105,49 +112,4 @@
     100% {
         -webkit-transform: translateX(0px) rotateY(181deg) translateZ(-500px) scale3d(5,5,5);
     }
-}
-
-.Card-wrapper {
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    width: 100%;
-    height: 100%;
-}
-
-.Card-face {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-}
-
-.Card-face--front {
-    -webkit-transform-style: preserve-3d;
-}
-
-.Card-face--back {
-    -webkit-transform: rotateY(180deg);
-    background: hsl(0,0%, 95%);
-}
-
-.Card-image {
-    width: 100%;
-    height: 100%;
-}
-
-.Card-caption {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(25,25,25,0.8);
-}
-
-.Card-title {
-    font-family: "Open Sans", sans-serif;
-    text-transform: uppercase;
-    line-height: 1.5em;
-    padding: 0 1.5em;
-    letter-spacing: 1.2px;
-    font-size: 1.5em;
-    color: white;
 }
