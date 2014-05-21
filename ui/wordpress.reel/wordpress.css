@@ -1,7 +1,6 @@
 .Wordpress {
     position: relative;
-    -webkit-flex: 1;
-    flex: 1;
+    min-height: 100%;
 }
 
 

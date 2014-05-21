@@ -1,4 +1,8 @@
 .Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
@@ -6,7 +10,8 @@
     -webkit-justify-content: space-between;
     justify-content: space-between;
     padding: 0.4rem;
-    background: indianred;
+    background: hsla(0, 0%, 15%, 0.2);
+    z-index: 100;
 }
 
 .Header > * {
