@@ -3,23 +3,25 @@
  * @requires montage/ui/component
  */
 var Component = require("montage/ui/component").Component;
-var Reqwest = require("reqwest");
+
 
 /**
  * @class Wordpress
  * @extends Component
  */
 exports.Wordpress = Component.specialize(/** @lends Wordpress# */ {
+
     constructor: {
         value: function Wordpress() {
             this.super();
         }
     },
-    
+
     templateDidLoad: {
-        value: function() {
-            this.loadContent();
-            this.addPathChangeListener("selectedPost", this, "handleSelection");
+        value: function(firstTime) {
+            if (firstTime) {
+                this.addPathChangeListener("selectedPost", this, "handleSelection");
+            }
         }
     },
 
@@ -47,26 +49,6 @@ exports.Wordpress = Component.specialize(/** @lends Wordpress# */ {
                 blog.style.opacity = 1;
                 blog.style.zIndex = 15;
             }, 1200);
-        }
-    },
-
-    makeRequest: {
-        value: function(address, path, query) {
-            var url = "http://" + address + "/wp-json/" + path + "?_jsonp=cb";
-            if (query) url += "&" + Reqwest.toQueryString(query);
-
-            return Reqwest({url: url, type: "jsonp", method: "get", 
-                            jsonpCallback: "_jsonp", jsonpCallbackName: "cb"});
-        }
-    },
-
-    loadContent: {
-        value: function()  {
-            var params = {"filter[category_name]": "featured"};
-            var request = this.makeRequest(this.siteAddress, "posts", params);
-
-            var self = this;
-            request.then(function(output) { self.items = output; });
         }
     }
 });

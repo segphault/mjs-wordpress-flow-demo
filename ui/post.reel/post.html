@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="post.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "postContent": {
+            "prototype": "ui/html",
+            "properties": {
+                "element": {"#": "postContent"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.article.content"}
+            }
+        },
+        "postHeading": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "postHeading"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.article.title"}
+            }
+        },
+        "postImage": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "postImage"},
+                "crossOrigin": null
+            },
+            "bindings": {
+                "src": {"<-": "@owner.article.featured_image.source"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Post">
+        <div class="Post-imageWrapper">
+            <img data-montage-id="postImage" class="Post-image" src="">
+        </div>
+        <div class="Post-content">
+            <h1 class="Post-heading" data-montage-id="postHeading"></h1>
+            <div class="Post-copy" data-montage-id="postContent"></div>
+        </div>
+    </div>
+</body>
+</html>

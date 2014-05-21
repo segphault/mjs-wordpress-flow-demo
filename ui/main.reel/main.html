@@ -22,8 +22,17 @@
         "wordpressFeatured": {
             "prototype": "ui/wordpress.reel",
             "properties": {
-                "element": {"#": "wordpressFeatured"},
-                "siteAddress": "demo.phault.net"
+                "element": {"#": "wordpressFeatured"}
+            },
+            "bindings": {
+                "articles": {"<-": "@wordpressConnector.articles"}
+            }
+        },
+        "wordpressConnector": {
+            "prototype": "montage-wordpress/core/wordpress-connector",
+            "properties": {
+                "host": "demo.phault.net",
+                "path": "posts"
             }
         }
     }
