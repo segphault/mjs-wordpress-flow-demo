@@ -23,19 +23,36 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         }
     },
 
-    articlesController: {
-        value: null
-    },
-
     handleSelection: {
         value: function(post) {
-            if (!post) return;
-
+            if (post) {
+                this.revealPost();
+            }
+        }
+    },
+    
+    revealPost: {
+        value: function () {
             window.setTimeout(function() {
                 var blog = document.getElementById("blog-post")
                 blog.style.opacity = 1;
                 blog.style.zIndex = 15;
             }, 1200);
+        }
+    },
+    
+    hidePost: {
+        value: function() {
+            var blog = document.querySelector("#blog-post")
+            blog.style.opacity = 0;
+
+            document.querySelector(".js-card.selected").classList.remove("selected");
+
+            var self = this;
+            window.setTimeout(function() {
+                blog.style.zIndex = 0;
+                self.templateObjects.articlesController.clearSelection();
+            }, 1000);
         }
     }
 });

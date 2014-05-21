@@ -16,28 +16,13 @@
                 "selectedPost": {"<-": "@articlesController.selection.0"}
             }
         },
-        "header": {
-            "prototype": "ui/header.reel",
-            "properties": {
-                "element": {"#": "header"},
-                "articlesController": {"@": "articlesController"}
-            }
-        },
-        "wordpressConnector": {
-            "prototype": "montage-wordpress/core/wordpress-connector",
-            "properties": {
-                "host": "demo.phault.net",
-                "path": "posts"
-            }
-        },
         "articlesController": {
             "prototype": "montage/core/range-controller",
             "bindings": {
                 "content": {"<-": "@wordpressConnector.articles"}
             }
         },
-
-         "card1": {
+        "card1": {
             "prototype": "ui/card.reel",
             "properties": {
                 "element": {"#": "card1"}
@@ -50,7 +35,6 @@
             "prototype": "montage/ui/flow.reel",
             "properties": {
                 "element": {"#": "flow"},
-                "contentController": {"@": "articlesController"},
                 "cameraFov": 50,
                 "cameraPosition": [
                     -3.949999999998454,
@@ -62,6 +46,7 @@
                     -10,
                     357.4249999999979
                 ],
+                "contentController": {"@": "articlesController"},
                 "flowEditorMetadata": {
                     "flowEditorVersion": 0.1,
                     "shapes": [
@@ -143,6 +128,13 @@
                 "selectedIndexScrollingOffset": 0
             }
         },
+        "header": {
+            "prototype": "ui/header.reel",
+            "properties": {
+                "element": {"#": "header"},
+                "articlesController": {"@": "articlesController"}
+            }
+        },
         "post": {
             "prototype": "ui/post.reel",
             "properties": {
@@ -150,6 +142,13 @@
             },
             "bindings": {
                 "article": {"<-": "@articlesController.selection.0"}
+            }
+        },
+        "wordpressConnector": {
+            "prototype": "montage-wordpress/core/wordpress-connector",
+            "properties": {
+                "host": "demo.phault.net",
+                "path": "posts"
             }
         }
     }

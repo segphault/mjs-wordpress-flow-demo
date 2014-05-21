@@ -13,5 +13,11 @@ exports.Header = Component.specialize(/** @lends Header# */ {
         value: function Header() {
             this.super();
         }
+    },
+    
+    handleCloseButtonAction: {
+        value: function() {
+            this.dispatchEventNamed("closePost", true, true);
+        }
     }
 });
