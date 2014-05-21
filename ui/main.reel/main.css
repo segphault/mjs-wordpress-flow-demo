@@ -50,3 +50,17 @@
         -webkit-transform: translateX(0px) rotateY(181deg) translateZ(-500px) scale3d(5,5,5);
     }
 }
+
+/* Post -------------------------------------------------------------------- */
+
+.Main .Post {
+    opacity: 0;
+    z-index: 0;
+}
+
+.Main .Post--revealed {
+    opacity: 1;
+    z-index: 15;
+    -webkit-transition: opacity 1000ms;
+    -webkit-transition-delay: 1200ms;
+}

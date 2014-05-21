@@ -19,8 +19,8 @@
         "actionEventListener": {
             "prototype": "montage/core/event/action-event-listener",
             "properties": {
-                "action": "hidePost",
-                "handler": {"@": "owner"}
+                "action": "clearSelection",
+                "handler": {"@": "articlesController"}
             },
             "_dev": {
                 "isHidden": true
@@ -32,10 +32,10 @@
                 "content": {"<-": "@wordpressConnector.articles"}
             }
         },
-        "card1": {
+        "card": {
             "prototype": "ui/card.reel",
             "properties": {
-                "element": {"#": "card1"}
+                "element": {"#": "card"}
             },
             "bindings": {
                 "article": {"<-": "@flow:iteration.object"}
@@ -141,8 +141,10 @@
         "header": {
             "prototype": "ui/header.reel",
             "properties": {
-                "element": {"#": "header"},
-                "articlesController": {"@": "articlesController"}
+                "element": {"#": "header"}
+            },
+            "bindings": {
+                "selectedPost": {"<-": "@articlesController.selection.0"}
             },
             "listeners": [
                 {
@@ -158,7 +160,8 @@
                 "element": {"#": "post"}
             },
             "bindings": {
-                "article": {"<-": "@articlesController.selection.0"}
+                "article": {"<-": "@articlesController.selection.0"},
+                "classList.has('Post--revealed')": {"<-": "@articlesController.selection.0"}
             }
         },
         "wordpressConnector": {
@@ -179,7 +182,7 @@
         <div data-montage-id="flow" class="Flow">
             <div class="Flow-item js-card">
                 <div class="Flow-item-wrapper">
-                    <div data-montage-id="card1"></div>
+                    <div data-montage-id="card"></div>
                 </div>
             </div>
         </div>
