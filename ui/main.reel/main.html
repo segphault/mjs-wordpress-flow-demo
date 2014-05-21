@@ -11,19 +11,15 @@
         "owner": {
             "properties": {
                 "element": {"#": "main"}
+            },
+            "bindings": {
+                "selectedPost": {"<-": "@articlesController.selection.0"}
             }
         },
         "header": {
             "prototype": "ui/header.reel",
             "properties": {
                 "element": {"#": "header"},
-                "articlesController": {"@": "articlesController"}
-            }
-        },
-        "wordpressFeatured": {
-            "prototype": "ui/wordpress.reel",
-            "properties": {
-                "element": {"#": "wordpressFeatured"},
                 "articlesController": {"@": "articlesController"}
             }
         },
@@ -39,6 +35,122 @@
             "bindings": {
                 "content": {"<-": "@wordpressConnector.articles"}
             }
+        },
+
+         "card1": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card1"}
+            },
+            "bindings": {
+                "article": {"<-": "@flow:iteration.object"}
+            }
+        },
+        "flow": {
+            "prototype": "montage/ui/flow.reel",
+            "properties": {
+                "element": {"#": "flow"},
+                "contentController": {"@": "articlesController"},
+                "cameraFov": 50,
+                "cameraPosition": [
+                    -3.949999999998454,
+                    -0.2499999999990905,
+                    1655.5749999999966
+                ],
+                "cameraTargetPoint": [
+                    -0.6999999999998181,
+                    -10,
+                    357.4249999999979
+                ],
+                "flowEditorMetadata": {
+                    "flowEditorVersion": 0.1,
+                    "shapes": [
+                        {
+                            "type": "FlowSpline",
+                            "name": "Spline 1",
+                            "pathIndex": 0
+                        }
+                    ],
+                    "selected": 0
+                },
+                "hasElasticScrolling": true,
+                "hasSelectedIndexScrolling": true,
+                "isSelectionEnabled": true,
+                "linearScrollingVector": [
+                    -300,
+                    0
+                ],
+                "paths": [
+                    {
+                        "knots": [
+                            {
+                                "previousHandlerPosition": [],
+                                "nextDensity": 10,
+                                "previousDensity": 10,
+                                "knotPosition": [
+                                    -761.8749999999984,
+                                    -270,
+                                    691.324999999998
+                                ],
+                                "rotateX": 0,
+                                "rotateY": 0,
+                                "rotateZ": 0,
+                                "opacity": 1,
+                                "nextHandlerPosition": [
+                                    738.1250000000016,
+                                    -270,
+                                    -328.675000000002
+                                ]
+                            },
+                            {
+                                "knotPosition": [
+                                    1937.099999999999,
+                                    -270,
+                                    -1316.0499999999993
+                                ],
+                                "nextHandlerPosition": [
+                                    3207.8250000000007,
+                                    -270,
+                                    -1461.849999999998
+                                ],
+                                "previousHandlerPosition": [
+                                    666.3749999999973,
+                                    -270,
+                                    -1170.2500000000005
+                                ],
+                                "nextDensity": 10,
+                                "previousDensity": 10,
+                                "rotateX": 0,
+                                "rotateY": 0,
+                                "rotateZ": 0,
+                                "opacity": 1
+                            }
+                        ],
+                        "units": {
+                            "rotateX": "",
+                            "rotateY": "",
+                            "rotateZ": "",
+                            "opacity": ""
+                        },
+                        "headOffset": 1,
+                        "tailOffset": 0
+                    }
+                ],
+                "scrollingTransitionDuration": 500,
+                "scrollingTransitionTimingFunction": "ease",
+                "scrollVectorX": true,
+                "scrollVectorY": true,
+                "selectedIndexScrollingOffset": 0
+            }
+        },
+        "post": {
+            "prototype": "ui/post.reel",
+            "properties": {
+                "element": {"#": "post"}
+            },
+            "bindings": {
+                "article": {"<-": "@articlesController.selection.0"}
+            }
         }
     }
     </script>
@@ -46,7 +158,14 @@
 <body>
     <div data-montage-id="main" class="Main">
         <header data-montage-id="header"></header>
-        <div data-montage-id="wordpressFeatured"></div>
+        <div data-montage-id="post" id="blog-post" class="Post"></div>
+        <div data-montage-id="flow" class="Flow" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0">
+            <div class="Flow-item js-card">
+                <div class="Flow-item-wrapper">
+                    <div data-montage-id="card1"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
