@@ -13,23 +13,23 @@
                 "element": {"#": "main"}
             },
             "bindings": {
-                "selectedPost": {"<-": "@articlesController.selection.0"}
+                "selectedPost": {"<-": "@postsController.selection.0"}
             }
         },
         "actionEventListener": {
             "prototype": "montage/core/event/action-event-listener",
             "properties": {
                 "action": "clearSelection",
-                "handler": {"@": "articlesController"}
+                "handler": {"@": "postsController"}
             },
             "_dev": {
                 "isHidden": true
             }
         },
-        "articlesController": {
+        "postsController": {
             "prototype": "montage/core/range-controller",
             "bindings": {
-                "content": {"<-": "@wordpressConnector.articles"}
+                "content": {"<-": "@wordpressConnector.posts"}
             }
         },
         "card": {
@@ -38,7 +38,7 @@
                 "element": {"#": "card"}
             },
             "bindings": {
-                "article": {"<-": "@flow:iteration.object"}
+                "post": {"<-": "@flow:iteration.object"}
             }
         },
         "flow": {
@@ -56,7 +56,7 @@
                     -10,
                     357.4249999999979
                 ],
-                "contentController": {"@": "articlesController"},
+                "contentController": {"@": "postsController"},
                 "flowEditorMetadata": {
                     "flowEditorVersion": 0.1,
                     "shapes": [
@@ -144,7 +144,7 @@
                 "element": {"#": "header"}
             },
             "bindings": {
-                "selectedPost": {"<-": "@articlesController.selection.0"}
+                "selectedPost": {"<-": "@postsController.selection.0"}
             },
             "listeners": [
                 {
@@ -160,8 +160,8 @@
                 "element": {"#": "post"}
             },
             "bindings": {
-                "article": {"<-": "@articlesController.selection.0"},
-                "classList.has('Post--revealed')": {"<-": "@articlesController.selection.0"}
+                "post": {"<-": "@postsController.selection.0"},
+                "classList.has('Post--revealed')": {"<-": "@postsController.selection.0"}
             }
         },
         "wordpressConnector": {
