@@ -4,7 +4,8 @@
     "dependencies": {
         "montage": "~0.14.0",
         "digit": "~0.5.0",
-        "matte": ""
+        "matte": "",
+        "montage-wordpress": "*"
     },
     "devDependencies": {
         "montage-testing": "~0.4.0"
