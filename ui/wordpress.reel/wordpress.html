@@ -120,70 +120,28 @@
                 "selectedIndexScrollingOffset": 0
             }
         },
-        "postButton": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "postButton"},
-                "label": ""
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "owner"}
-                }
-            ]
-        },
-        "postContent": {
-            "prototype": "ui/html",
-            "properties": {
-                "element": {"#": "postContent"},
-                "value": "Text"
-            },
-            "bindings": {
-                "value": {"<-": "@rangeController.selection.0.content"}
-            }
-        },
-        "postHeading": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "postHeading"},
-                "value": "Text"
-            },
-            "bindings": {
-                "value": {"<-": "@rangeController.selection.0.title"}
-            }
-        },
-        "postImage": {
-            "prototype": "digit/ui/image.reel",
-            "properties": {
-                "element": {"#": "postImage"},
-                "crossOrigin": null
-            },
-            "bindings": {
-                "src": {"<-": "@rangeController.selection.0.featured_image.source"}
-            }
-        },
+        
         "rangeController": {
             "prototype": "montage/core/range-controller",
             "bindings": {
                 "content": {"<-": "@owner.items"}
             }
-        }
+        },
+        "post": {
+            "prototype": "ui/post.reel",
+            "properties": {
+                "element": {"#": "post"}
+            },
+            "bindings": {
+                "article": {"<-": "@rangeController.selection.0"}
+            }
+        },
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Wordpress">
-        <div id="blog-post" class="Post">
-            <div class="Post-imageWrapper">
-                <img data-montage-id="postImage" class="Post-image" src="">
-            </div>
-            <div class="Post-content">
-                <div class="Post-button" data-montage-id="postButton"></div>
-                <h1 class="Post-heading" data-montage-id="postHeading"></h1>
-                <div class="Post-copy" data-montage-id="postContent"></div>
-            </div>
-        </div>
+        <div data-montage-id="post" id="blog-post" class="Post"></div>
         <div data-montage-id="flow" class="Flow" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0">
             <div class="Flow-item js-card">
                 <div class="Flow-item-wrapper">
