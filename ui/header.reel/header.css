@@ -10,7 +10,7 @@
     -webkit-justify-content: space-between;
     justify-content: space-between;
     padding: 0.4rem;
-    background: hsla(0, 0%, 15%, 0.2);
+    background: hsla(0, 0%, 15%, 0.4);
     z-index: 100;
 }
 
