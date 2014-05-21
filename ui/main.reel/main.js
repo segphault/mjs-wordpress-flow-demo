@@ -41,7 +41,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     hidePost: {
         value: function() {
             
-            if (this.templateObjects.articlesController.selection.length > 0) {
+            if (this.templateObjects.articlesController.selection.length === 0) {
                 return;
             }
             
