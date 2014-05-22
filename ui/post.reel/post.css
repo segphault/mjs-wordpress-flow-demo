@@ -27,6 +27,7 @@
 .Post-image {
     display: block;
     width: 100%;
+    -webkit-user-drag: none;
 }
 
 .Post-heading {
