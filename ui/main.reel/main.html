@@ -11,9 +11,6 @@
         "owner": {
             "properties": {
                 "element": {"#": "main"}
-            },
-            "bindings": {
-                "selectedPost": {"<-": "@postsController.selection.0"}
             }
         },
         "actionEventListener": {
@@ -24,12 +21,6 @@
             },
             "_dev": {
                 "isHidden": true
-            }
-        },
-        "postsController": {
-            "prototype": "montage/core/range-controller",
-            "bindings": {
-                "content": {"<-": "@wordpressConnector.posts"}
             }
         },
         "card": {
@@ -160,16 +151,22 @@
                 "element": {"#": "post"}
             },
             "bindings": {
-                "post": {"<-": "@postsController.selection.0"},
-                "classList.has('Post--revealed')": {"<-": "@postsController.selection.0"}
+                "classList.has('Post--revealed')": {"<-": "@postsController.selection.0"},
+                "post": {"<-": "@postsController.selection.0"}
+            }
+        },
+        "postsController": {
+            "prototype": "montage/core/range-controller",
+            "bindings": {
+                "content": {"<-": "@wordpressConnector.posts"}
             }
         },
         "wordpressConnector": {
             "prototype": "montage-wordpress/core/wordpress-connector",
             "properties": {
+                "categoryFilter": "featured",
                 "host": "demo.phault.net",
-                "path": "posts",
-                "categoryFilter": "featured"
+                "path": "posts"
             }
         }
     }
