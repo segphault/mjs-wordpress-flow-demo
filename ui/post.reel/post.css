@@ -4,6 +4,9 @@
     font-family: Open Sans, sans-serif;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    overflow-scrolling: touch;
     background-color: hsl(0,0%,100%);
 }
 
@@ -28,6 +31,9 @@
     display: block;
     width: 100%;
     -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    user-drag: none;
 }
 
 .Post-heading {
@@ -56,6 +62,9 @@
     height: auto;
     min-width: 0;
     -webkit-transform: translateZ(0); /* Put onto own layer to avoid jumping */
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .Post-button.digit-Button:focus {
