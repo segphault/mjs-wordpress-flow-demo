@@ -10,13 +10,6 @@
       }
     }
   },
-  "blueprint_unnamed_test": {
-    "prototype": "montage/core/meta/property-blueprint",
-    "properties": {
-      "name": "test",
-      "blueprint": {"@": "root"}
-    }
-  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
@@ -25,13 +18,8 @@
         "%": "ui/main.reel/main.meta"
       },
       "parent": {"@": "blueprint_component_reference"},
-      "propertyBlueprints": [
-        {"@": "blueprint_unnamed_test"}
-      ],
       "propertyBlueprintGroups": {
-        "Main": [
-          {"@": "blueprint_unnamed_test"}
-        ],
+        "Main": [],
         "WordpressFeatured": []
       },
       "module": {
