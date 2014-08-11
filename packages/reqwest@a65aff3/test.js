@@ -1,0 +1,1 @@
+var spawn=require("child_process").spawn,server=spawn("node",["make/tests.js"]),phantom=spawn("./vendor/phantomjs",["./phantom.js"]);phantom.stdout.on("data",function(e){console.log("stdout: "+e)}),phantom.on("exit",function(e){var t=0==e?"passed":"failed";console.log("Reqwest tests have %s",t,e),server.kill("SIGHUP"),process.exit(e)});

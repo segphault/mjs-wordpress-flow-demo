@@ -1,0 +1,1 @@
+montageDefine("a65aff3","tests/fixtures/fixtures.html",{text:"<html><head></head><body><p>boosh</p></body></html>"});

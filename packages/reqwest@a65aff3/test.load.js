@@ -1,0 +1,1 @@
+montageDefine("a65aff3","test",{dependencies:["child_process"],factory:function(e){var t=e("child_process").spawn,n=t("node",["make/tests.js"]),i=t("./vendor/phantomjs",["./phantom.js"]);i.stdout.on("data",function(e){console.log("stdout: "+e)}),i.on("exit",function(e){var t=0==e?"passed":"failed";console.log("Reqwest tests have %s",t,e),n.kill("SIGHUP"),process.exit(e)})}});

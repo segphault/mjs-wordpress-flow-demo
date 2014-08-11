@@ -1,0 +1,1 @@
+montageDefine("a65aff3","tests/fixtures/fixtures",{dependencies:[],factory:function(){window.boosh="boosh"}});

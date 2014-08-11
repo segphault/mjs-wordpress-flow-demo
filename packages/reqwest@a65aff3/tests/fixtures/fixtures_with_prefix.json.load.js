@@ -1,0 +1,1 @@
+montageDefine("a65aff3","tests/fixtures/fixtures_with_prefix.json",{exports: ])}while(1);</x>{ "boosh": "boosh" }})

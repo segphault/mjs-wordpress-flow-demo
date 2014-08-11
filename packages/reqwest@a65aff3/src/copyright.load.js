@@ -1,0 +1,1 @@
+montageDefine("a65aff3","src/copyright",{dependencies:[],factory:function(){}});

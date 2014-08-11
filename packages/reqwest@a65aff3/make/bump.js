@@ -1,0 +1,1 @@
+var fs=require("fs"),version=require("../package.json").version;["./reqwest.js","./reqwest.min.js"].forEach(function(e){var t=fs.readFileSync(e,"utf8");t=t.replace(/^\/\*\!/,"/*! version: "+version),fs.writeFileSync(e,t)});

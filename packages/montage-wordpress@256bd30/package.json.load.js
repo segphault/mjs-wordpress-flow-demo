@@ -1,0 +1,1 @@
+montageDefine("256bd30","package.json",{exports:{name:"montage-wordpress",version:"0.1.0",dependencies:{montage:"~0.14.0",reqwest:"1.1.0"},hash:"256bd30",mappings:{montage:{name:"montage",hash:"3cbcb4a",location:"../montage@3cbcb4a/"},reqwest:{name:"reqwest",hash:"a65aff3",location:"../reqwest@a65aff3/"}},production:!0,useScriptInjection:!0}});

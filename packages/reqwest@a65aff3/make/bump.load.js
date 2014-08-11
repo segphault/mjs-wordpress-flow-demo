@@ -1,0 +1,1 @@
+montageDefine("a65aff3","make/bump",{dependencies:["fs","../package.json"],factory:function(e){var t=e("fs"),n=e("../package.json").version;["./reqwest.js","./reqwest.min.js"].forEach(function(e){var i=t.readFileSync(e,"utf8");i=i.replace(/^\/\*\!/,"/*! version: "+n),t.writeFileSync(e,i)})}});

@@ -1,0 +1,1 @@
+montageDefine("192b8e1","ui/input-number.reel/input-number",{dependencies:["ui/text-input"],factory:function(e,t){var n=e("ui/text-input").TextInput,r=t.InputNumber=n.specialize({});r.addAttributes({max:{dataType:"number"},min:{dataType:"number"},step:null})}});
